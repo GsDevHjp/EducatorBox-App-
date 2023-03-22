@@ -1,0 +1,55 @@
+<div id="wrapper">
+    <mat-toolbar>
+        <span class="example-spacer">Registration</span>
+        <mat-icon mat-dialog-close>cancel</mat-icon>
+    </mat-toolbar>
+    <form>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Ishue Person Name</mat-label>
+            <input matInput formControlName="inst_name">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>E-mail</mat-label>
+            <input type="email" matInput formControlName="inst_email" placeholder="Please Enter a Valid Email"
+                >
+        </mat-form-field><br>
+
+        <mat-form-field class="example-full-width" appearance="fill" id="password">
+            <mat-label>Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" formControlName="inst_password"
+                onkeypress=" return this.value.length < 20">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Date</mat-label>
+            <input type="date" matInput formControlName="inst_regist_date">
+        </mat-form-field><br>
+
+        <div class="register">
+            <button mat-raised-button color="primary"
+               >Register</button>
+        </div>
+        <br>
+        <div >
+            <div class="register">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>OTP</mat-label>
+                    <input type="number" matInput formControlName="otp_recive"
+                        placeholder="Enter Email OTP" onkeypress=" return this.value.length < 6">
+                </mat-form-field><br>
+            </div>
+            <div class="register">
+                <button mat-raised-button color="primary"
+                    >Verify</button>
+            </div>
+        </div>
+    </form>
+
+
+</div>

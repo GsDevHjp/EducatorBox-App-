@@ -1,0 +1,170 @@
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: #cac7c7;
+    color: black;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 50px;
+    background-color: rgb(110, 110, 110);
+}
+
+/* for mat menu  */
+.mat-menu-content:not(:empty) {
+    background-color: #1d1f23;
+    width: 150px;
+    color: black;
+}
+
+.mat-menu-panel {
+    margin-top: 15px;
+}
+
+.action_btn {
+    color: whitesmoke;
+    background-color: #1d1f23;
+}
+
+.action_btn:hover{
+    background-color: #3f50b5!important;
+} 
+
+/* for table  */
+.head {
+    height: 40px;
+    width: 100%;
+    background-color: #1d1f23;
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.count_area {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #1d1f23;
+}
+
+#search_box {
+    border: none;
+    border-bottom: 1px solid #1d1f23;
+    outline: none;
+    padding: 5px;
+    background-color: whitesmoke;
+    position: relative;
+    top: -2px;
+}
+
+#search_box:hover {
+    border-bottom: 2px solid #1d1f23;
+}
+
+#search_box:hover::placeholder {
+    color: #1d1f23;
+}
+
+table {
+    width: 100%;
+}
+
+th.mat-header-cell {
+    color: rgb(255, 255, 255);
+    background-color: #1d1f23;
+    font-size: 13px;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(200, 200, 200);
+}
+
+tr:hover {
+    background-color: #494949;
+    color: rgb(253, 253, 253);
+}
+
+.mat-row:hover>.mat-cell {
+    color: white
+}
+#tbl_hight {
+    height: 45px;
+}
+.action_btn {
+    color: #fff;
+}
+.add_mat_icon {
+    cursor: pointer;
+    color: white;
+}
+.action_btn:hover {
+    background-color: #5a74ad;
+}
+.submit {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.close-mat-icon {
+    color: #1d1f23;
+    position: relative;
+    left: 4px;
+    top: -10px;
+}
+.example-spacer {
+    flex: 1 1 auto;
+    margin-bottom: 20px;
+    color: #1d1f23;
+    font-size: 18px;
+}
+
+mat-dialog-container {
+    padding: 25px 20px 20px 20px !important;
+}
+.add_form_title {
+    height: 30px !important;
+    background: none !important;
+    padding: 0px !important;
+}
+mat-form-field {
+    margin: 0px 5px;
+}
+.desc {
+    width: calc(100% - 10px) !important;
+}
+@media (max-width:768px) {
+     .mat-dialog-container {
+        height:500px !important;
+        background-color: rgb(222, 222, 222) !important;
+        padding: 25px 20px 20px 20px !important;
+    }
+
+    mat-form-field {
+        width: 100%;
+        margin: 0px;
+    }
+    .mat-elevation-z8 {
+        overflow: auto;
+    }
+    .desc {
+        width: 100% !important;
+    }
+    th.mat-header-cell{
+        white-space: nowrap;
+        padding: 0px 10px !important;
+    }
+    td.mat-cell{
+        white-space: nowrap;
+        padding: 0px 10px !important;
+    }
+    mat-paginator{
+        position: absolute;
+        width: 100%; 
+    }    
+}
+    

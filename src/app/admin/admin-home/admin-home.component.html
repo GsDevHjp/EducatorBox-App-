@@ -1,0 +1,33 @@
+<mat-sidenav-container class="wrapper">
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+        <app-admin-sidebar></app-admin-sidebar>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content">
+            <div class="toolbar">
+                <mat-toolbar>
+                    <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+                    <div id="dash_header_admin">
+                        <div class="name_text">
+                            <span>Login as :&nbsp;&nbsp;{{name}}</span>
+                        </div>
+                        <button class="login_head" mat-button [matMenuTriggerFor]="menu">
+                            <div id="admin_logo">
+                                <img src={{url}}{{img_url}}>
+                            </div>
+                        </button>
+                        <mat-menu #menu="matMenu">
+                            <button mat-menu-item class="action_btn">Update Profile</button>
+                            <button mat-menu-item class="action_btn" [routerLink]="['#']">I-Card</button>
+                            <button mat-menu-item class="action_btn" (click)="changepassword()">Change Password</button>
+                            <button mat-menu-item class="action_btn" [routerLink]="['/adminlogin']">LogOut</button>
+                        </mat-menu>
+                    </div>
+                </mat-toolbar>
+            </div>
+            <div class="main">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

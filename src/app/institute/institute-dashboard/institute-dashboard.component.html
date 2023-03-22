@@ -1,0 +1,102 @@
+<div class="main_area">
+
+    <a routerLink="/institutehome/course">
+        <div id="thumbnail">
+            <mat-icon>school</mat-icon><br>
+            <span><b>{{course_count}}</b></span><br>
+            <span>Coures</span>
+        </div>
+    </a>
+
+    <a routerLink="/institutehome/batch">
+        <div id="thumbnail">
+            <mat-icon>local_library</mat-icon><br>
+            <span><b>{{batch_count}}</b></span><br>
+            <span>Batch</span>
+        </div> 
+    </a>
+
+    <a routerLink="/institutehome/student">
+        <div id="thumbnail">
+            <mat-icon>library_books</mat-icon><br>
+            <span><b>{{student_count}}</b></span><br>
+            <span>Student</span>
+        </div>
+    </a>
+
+    <a routerLink="/institutehome/admission">
+        <div id="thumbnail">
+            <mat-icon>airline_seat_recline_normal</mat-icon><br>
+            <span><b>{{admission_count}}</b></span><br>
+            <span>Admission</span>
+        </div>
+    </a>
+
+    <a routerLink="/institutehome/enquiry">
+        <div id="thumbnail">
+            <mat-icon>transfer_within_a_station</mat-icon><br>
+            <span><b>{{enquiry_count}}</b></span><br>
+            <span>Enquiry</span>
+        </div>
+    </a>
+
+    <a routerLink="/institutehome/fee">
+        <div id="thumbnail">
+            <mat-icon>payment</mat-icon><br>
+            <span><b>₹ &nbsp;{{fee_count |currency:'' + ' ' }}</b></span><br>
+            <span>Fee collected in {{Month | date : 'MMMM' | titlecase}}</span>
+        </div>
+    </a>
+
+    <a routerLink="/institutehome/dues">
+        <div id="thumbnail">
+            <mat-icon>account_balance_wallet</mat-icon><br>
+            <span><b>₹ &nbsp;{{dues_count |currency:'' + ' ' }}</b></span><br>
+            <span>Dues</span>
+        </div>
+    </a>
+
+    <a routerLink="/institutehome/certificate">
+        <div id="thumbnail">
+            <mat-icon>file_copy</mat-icon><br>
+            <span><b>{{quiz_count}}</b></span><br>
+            <span>Issue cerificate</span>
+        </div>
+    </a>
+    <a routerLink="/institutehome/instquery">
+        <div id="thumbnail">
+            <mat-icon>equalizer</mat-icon><br>
+            <span><b>{{query_count}}</b></span><br>
+            <span>Pending Query</span>
+        </div>
+    </a>
+     
+    <a routerLink="/institutehome/employee">
+        <div id="thumbnail">
+            <mat-icon>supervisor_account</mat-icon><br>
+            <span><b>{{employee_count}}</b></span><br>
+            <span>Employee</span>
+        </div>
+    </a>    
+    <a routerLink="/institutehome/expence">
+        <div id="thumbnail">
+            <mat-icon>explicit</mat-icon><br>
+            <span><b>{{expence_count}}</b></span><br>
+            <span>Expense</span>
+        </div>
+    </a>    
+    <a routerLink="/institutehome/ledger">
+        <div id="thumbnail">
+            <mat-icon>book</mat-icon><br>
+            <span><b>₹ &nbsp;{{ledger_count |currency:'' + ' ' }}</b></span><br>
+            <span>Case in hand</span>
+        </div>
+    </a> 
+    <a routerLink="/institutehome/profitloss">
+        <div id="thumbnail">
+            <mat-icon>book</mat-icon><br>
+            <span><b>{{profitloss_count |currency:'' + ' ' }}</b></span><br>
+            <span>Profit & Loss</span>
+        </div>
+    </a>       
+</div>

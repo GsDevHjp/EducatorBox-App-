@@ -1,0 +1,31 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidebar mode="side" [opened]="action_menu">
+        <app-institute-sidebar></app-institute-sidebar>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content">
+            <div class="toolbar">
+                <mat-toolbar>
+                    <mat-icon (click)="sidebar.toggle()">menu</mat-icon>
+                    <span class="example-spacer"></span>
+                        <div class="name_text">
+                            Login as : &nbsp;{{ name | titlecase}}
+                        </div>&nbsp;
+                        <button style="background-color: transparent;" mat-raised-button [matMenuTriggerFor]="menu">
+                            <img src={{url}}{{img_url}} width="50" height="50" style="border-radius:100%;">
+                        </button>
+                        <mat-menu #menu="matMenu">
+                            <button mat-menu-item class="action_btn" (click)="profile_update()">Update Profile</button>
+                            <button mat-menu-item class="action_btn" >I-Card</button>
+                            <button mat-menu-item class="action_btn" (click)="inst_change_pwd()">Change
+                                Password</button>
+                            <button mat-menu-item class="action_btn" [routerLink]="['/institutelogin']">Logout</button>
+                        </mat-menu>
+                </mat-toolbar>
+            </div>
+            <div class="main">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

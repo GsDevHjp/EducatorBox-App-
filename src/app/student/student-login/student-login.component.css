@@ -1,0 +1,172 @@
+#wrapper {
+    width: auto;
+    height: auto;
+}
+
+#header {
+    height: 60px;
+    width: 100%;
+    background-color: #1d1f23;
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    margin: 14px 15px;
+    display: inline-block;
+}
+
+.login_head {
+    margin: 10px;
+    height: 40px;
+    background-color: #3f50b5;
+}
+
+.action_btn {
+    color: #fff;
+}
+
+.action_btn:hover {
+    background-color: #3f50b5;
+}
+
+#main {
+    width: 100%;
+    height: calc(100vh - 105px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../../assets/main_back.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.example-card {
+    max-width: 300px;
+    height: 460px;
+    box-sizing: border-box;
+    background-color: #1d1f23a7;
+    padding: 40px 50px;
+    position: relative;
+    bottom:55px;
+}
+
+.login_title {
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.login_logo {
+    width: 130px;
+    height: 100px;
+    margin: 20px auto 0px;
+    display: flex;
+    justify-content: center;
+}
+
+mat-card-content {
+    color: white;
+    margin-top: -20px;
+}
+
+mat-form-field {
+    width: 100%;
+    float: right;
+    margin-top: 0px;
+    padding: 1px 8px;
+}
+
+::placeholder {
+    color: #ffff;
+}
+
+mat-form-field mat-label {
+    color: #ffff;
+    font-size: 15px;
+}
+
+.icon_1 {
+    font-size: 28px;
+    position: relative;
+    top: 47px;
+    right:27px;
+    color: white;
+}
+
+.icon_2 {
+    font-size: 28px;
+    position: relative;
+    top: 106px;
+    right:50px;
+}
+
+.btn_area {
+    width: 100%;
+    height: 200px;
+}
+
+.login_btn {
+    width: 100%;
+    margin-top: -20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.creted_acc {
+    width: 100%;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.creted_acc b {
+    color: yellowgreen;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    top: 5px;
+}
+
+#footer {
+    width: 100%;
+    height: 45px;
+    color: #ffff;
+    line-height: 45px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #1d1f23;
+}
+
+@media(max-width:420px) {
+    .example-card {
+        height: auto;
+        margin: 3em auto;
+    }
+
+    /* .icon_1 {
+        position: absolute;
+        top: 47%;
+        right: 80%;
+    }
+
+    .icon_2 {
+        position: absolute;
+        top: 64%;
+        right: 80%;
+    } */
+}
+
+/* for input auto fill background transparent  */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-text-fill-color: #fff !important;
+    transition: background-color 5000000s ease-in-out 0s;
+}

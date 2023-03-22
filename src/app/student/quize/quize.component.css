@@ -1,0 +1,93 @@
+.wrapper {
+    width: 100%;
+    /* height: calc(100vh - 74px); */
+    /* margin-top:50px; */
+}
+
+#main {
+    width: 100%;
+    /* height: calc(100% - 80px); */
+}
+
+.header {
+    height: 40px;
+    width: 100%;
+    background-color: #1d1f23;
+    color: whitesmoke;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.header span:first-child {
+    float: left;
+    color: whitesmoke;
+    margin: 5px;
+}
+.round_box{
+    float: right;
+    width: 80px;
+    height: 30px;
+    border-radius: 50px;
+    margin-right: 15px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #626262;
+}
+
+
+#ques_viewport {
+    width: 100%;
+    height: 100%;
+    cursor: default;
+    overflow-y: auto;
+}
+
+#ques_viewport_head {
+    line-height: 35px;
+    font-size: 18px;
+    padding-left: 10px;
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+.ques_text {
+    margin-left: 60px;
+    margin-right: 20px;
+    padding-right: 40px;
+    margin-top: 30px;
+    display: block;
+}
+
+.ques_text p {
+    font-size: 18px;
+    color: black;
+    line-height: 30px;
+    margin-bottom: 35px;
+}
+
+.mat-card {
+    cursor: pointer;
+}
+
+.mat-card label {
+    cursor: pointer;
+}
+
+.text_info {
+    width: 100%;
+    height: 90px;
+    resize: none;
+    border: none;
+}
+
+.footer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    padding: 5px 66px 5px 62px;
+    justify-content: space-between;
+}
+
+.footer button {
+    height: 40px;
+}

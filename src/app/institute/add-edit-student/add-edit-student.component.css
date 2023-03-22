@@ -1,0 +1,96 @@
+.user_image {
+  width: 200px;
+  height: 122px;
+  float: right;
+  margin-top: -64px;
+}
+
+.user_image mat-label {
+  margin-left: 10px;
+}
+
+.user_file {
+  margin-top: 15px;
+  width: 180px;
+  margin-left: 10px;
+}
+
+.select_file {
+  height: 75px;
+  padding: 2px 50px 0px 50px;
+
+}
+#password {
+  width: 200px;
+}
+textarea {
+  height: 17px;
+}
+.adr_text_box{
+  width: 410px;
+}
+@media (min-width:769px) and (max-width:842px){
+  mat-form-field{
+    width: 180px;
+  }
+  .user_image {
+    width: 180px;
+    height: 122px;
+    float: right;
+    margin-top: -64px;
+  }
+  
+  .user_image mat-label {
+    margin-left: 10px;
+  }
+  
+  .user_file {
+    margin-top: 15px;
+    width: 180px;
+    margin-left: 10px;
+  }
+  
+  .select_file {
+    height: 75px;
+    padding: 2px 50px 0px 50px;
+  
+  }
+  #password {
+    width: 180px;
+  }
+  textarea {
+    height: 17px;
+  }
+}
+@media (max-width:768px) {
+  #wrapper_page{
+      height:400px;
+    }
+  .submit{
+    padding-bottom: 10px;
+  }  
+  #password {
+    width:100%;
+  }
+  .user_image {
+    width: 100%;
+    height: auto;
+    margin-top: 0px;
+    padding-bottom: 20px;
+  }  
+  .user_file {
+    margin-top: 40px;
+    width: 180px;
+    float: left;  
+  }
+  
+  .select_file {
+    height: 100px;
+    width: 100px;
+    float: right;   
+    padding: 0px 0px 0px 0px;
+  
+  }
+
+} 
+  

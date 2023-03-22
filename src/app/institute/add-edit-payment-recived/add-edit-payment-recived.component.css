@@ -1,0 +1,61 @@
+.box {
+  width: 200px;
+  height: 100%;
+  margin-left: 10px;
+  float: left;
+}
+
+.box:last-child {
+  margin-right: 10px;
+}
+.user_image{
+  height: 121px;
+  padding: 0px 30px 0px 30px;
+}
+ textarea {
+  height: 17px;
+}
+  .submit { 
+  margin-left: 78%;
+  margin-top:370px;
+}
+button {
+  margin-left: 10px;
+}
+@media (max-width:1120px) { 
+ .box{
+  width: 100%;
+ }
+ .box{
+  width: 200px;
+  height: 100%;
+  margin-left: 10px;
+  float: left;
+}
+.box:last-child {
+  width: 100%;
+}
+.user_image{
+  margin-top: 0;
+}
+
+}
+
+ @media (max-width:768px) {
+  #wrapper{
+    height:800px;   
+  }
+  .box {
+    width: 100%;
+    margin-left: 0px;    
+  } 
+  .user_image{
+    width: 174px;
+  }
+  .submit { 
+    margin-left: 0%;
+    margin-top:1628px;
+    padding-bottom: 10px;
+   
+  } 
+} 
