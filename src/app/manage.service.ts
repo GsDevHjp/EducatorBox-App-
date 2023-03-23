@@ -6,9 +6,9 @@ import { Injectable } from '@angular/core';
 })
 export class ManageService {
   constructor(
-    private http: HttpClient  
-  ) { }  
-  baseUrl: string = 'https://educatorbox.com/api/'; 
+    private http: HttpClient
+  ) { }
+  baseUrl: string = 'https://educatorbox.com/api/';
 
   // dashboard 
   get_dashboad(data: any) {
@@ -20,6 +20,16 @@ export class ManageService {
   //for admin
   admin_login(data: any) {
     return this.http.post<[]>(this.baseUrl + 'admin_login.php', data)
+  }
+  // for admin enquiry 
+  post_admin_enquiry(data: any) {
+    return this.http.post<any>(this.baseUrl + 'admin_enquiry_insert.php', data)
+  }
+  get_admin_enquiry() {
+    return this.http.get<[]>(this.baseUrl + 'admin_enquiry_view.php')
+  }
+  delete_enquiry(data: any) {
+    return this.http.post<any>(this.baseUrl + 'admin_enquiry_delete.php', data);
   }
   // for course module 
   get_course() {
@@ -108,7 +118,7 @@ export class ManageService {
   get_dues_by_reg_no(data: any) {
     return this.http.post<any>(this.baseUrl + 'get_dues_by_reg_no.php', data);
   }
- 
+
   duplicate_addmission(data: any) {
     return this.http.post<any>(this.baseUrl + 'duplicate_addmission.php', data);
   }
@@ -356,7 +366,7 @@ export class ManageService {
   get_query_by_std_id(data: any) {
     return this.http.post<any>(this.baseUrl + 'get_query_by_std_id.php', data);
   }
- 
+
   post_std_query(data: any) {
     return this.http.post<any>(this.baseUrl + 'std_queary_insert.php', data)
   }
@@ -364,7 +374,7 @@ export class ManageService {
     return this.http.put<any>(this.baseUrl + 'query_update.php', data);
   }
   //  For Employee Module
-  get_emp_by_inst_id(data:any) {
+  get_emp_by_inst_id(data: any) {
     return this.http.post<any>(this.baseUrl + 'get_emp_by_inst_id.php', data)
   }
   postEmployee(data: any) {
@@ -432,41 +442,40 @@ export class ManageService {
     return this.http.post<any>(this.baseUrl + 'send_mail.php', data)
   }
   //ledger module
-  post_ledger(data:any){
+  post_ledger(data: any) {
     return this.http.post<any>(this.baseUrl + 'ledger_insert.php', data)
   }
-  put_ledger(data:any){
+  put_ledger(data: any) {
     return this.http.put<any>(this.baseUrl + 'ledger_update.php', data)
   }
-  delete_ledger(data:any){
+  delete_ledger(data: any) {
     return this.http.post<any>(this.baseUrl + 'ledger_delete.php', data)
   }
-  get_ledger_by_inst_id(data:any){
-    return this.http.post<any>(this.baseUrl + 'get_ledger_by_inst_id.php',data)
+  get_ledger_by_inst_id(data: any) {
+    return this.http.post<any>(this.baseUrl + 'get_ledger_by_inst_id.php', data)
   }
-  
-  // for admin enquiry 
-  post_admin_enquiry(data: any) {
-    return this.http.post<any>(this.baseUrl + 'admin_enquiry_insert.php', data)
-  }
+
   post_employee_login(data: any) {
     return this.http.post<any>(this.baseUrl + 'employee_login.php', data);
   }
-  get_emp_by_emp_id(data:any){
+  get_emp_by_emp_id(data: any) {
     return this.http.post<any>(this.baseUrl + 'get_emp_by_emp_id.php', data)
   }
   get_account_calc(data: any) {
     return this.http.post<any>(this.baseUrl + 'account_view_by_store.php', data);
   }
-  
+
   // for send email 
   regsucessfully(data: any) {
     return this.http.post<any>(this.baseUrl + 'regsucessfully.php', data);
   }
-  get_std_dashboard_id(data:any){
-    return this.http.post<any>(this.baseUrl + 'get_std_dashboard_id.php',data)
+  get_std_dashboard_id(data: any) {
+    return this.http.post<any>(this.baseUrl + 'get_std_dashboard_id.php', data)
   }
-  profit_loss(data:any){
-    return this.http.post<any>(this.baseUrl + 'inst_profitloss.php',data)
+  profit_loss(data: any) {
+    return this.http.post<any>(this.baseUrl + 'inst_profitloss.php', data)
+  }
+  get_profit_loss_by_month(data: any) {
+    return this.http.post<any>(this.baseUrl + 'get_profit_loss_by_month.php', data)
   }
 }

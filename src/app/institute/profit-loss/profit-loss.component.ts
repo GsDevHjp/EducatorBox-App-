@@ -11,7 +11,7 @@ import { ManageService } from 'src/app/manage.service';
   styleUrls: ['./profit-loss.component.css']
 })
 export class ProfitLossComponent implements OnInit {
-  displayedColumns: string[] = ['enq_id', 'std_name', 'std_whatsapp_no', 'course_id_fk', 'std_gender', 'std_address', 'std_regist_date', 'action'];
+  displayedColumns: string[] = ['enq_id', 'ledger_date', 'ledger_today_Recived', 'ledger_expence', 'profit_loss',];
   dataSource = new MatTableDataSource();
   count_enquiry: number = 0;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -37,7 +37,7 @@ export class ProfitLossComponent implements OnInit {
   ngOnInit(): void {
     const fromdata = new FormData()
     fromdata.append('inst_id', this.login.inst_id)
-    this.service.profit_loss(fromdata).subscribe(
+    this.service.get_ledger_by_inst_id(fromdata).subscribe(
       (res: any) => {
         console.log(res)
         this.dataSource.data = res.data
@@ -48,7 +48,20 @@ export class ProfitLossComponent implements OnInit {
     )
   }
 
-
+  CurDate(event: any) { 
+    console.log(event.target.value + '-01')
+    const formdatatta =  new  FormData()
+    formdatatta.append('cur_date',event.target.value + '-01')
+    this.service.get_profit_loss_by_month(formdatatta).subscribe(
+      (res:any)=>{
+        console.log(res)
+        this.dataSource.data = res.data
+        this.dataSource.sort = this.sort;
+        this.dataSource.paginator = this.paginator;
+        this.count_enquiry = res.data.length
+      }
+    )
+  }
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
