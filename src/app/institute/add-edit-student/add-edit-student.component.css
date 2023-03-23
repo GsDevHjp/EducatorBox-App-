@@ -1,3 +1,25 @@
+/* for style css  */
+
+.example-spacer {
+  flex: 1 1 auto;
+  margin-bottom: 20px;
+  color: #1d1f23;
+  font-size: 18px;
+}
+
+.material-icons {
+  color: #1d1f23;
+  margin-bottom: 20px;
+}
+
+mat-toolbar {
+  height: 30px;
+  padding: 0px;
+  background: none;
+  position: relative;
+  color: whitesmoke;
+}
+
 .user_image {
   width: 200px;
   height: 122px;
@@ -20,77 +42,67 @@
   padding: 2px 50px 0px 50px;
 
 }
+
 #password {
   width: 200px;
 }
+
+#address {
+  width: 65%;
+  margin-left: 1.5%;
+}
+
 textarea {
   height: 17px;
 }
-.adr_text_box{
-  width: 410px;
+
+button {
+  margin-left: 10px;
 }
-@media (min-width:769px) and (max-width:842px){
-  mat-form-field{
-    width: 180px;
-  }
-  .user_image {
-    width: 180px;
-    height: 122px;
-    float: right;
-    margin-top: -64px;
-  }
-  
-  .user_image mat-label {
-    margin-left: 10px;
-  }
-  
-  .user_file {
-    margin-top: 15px;
-    width: 180px;
-    margin-left: 10px;
-  }
-  
-  .select_file {
-    height: 75px;
-    padding: 2px 50px 0px 50px;
-  
-  }
-  #password {
-    width: 180px;
-  }
-  textarea {
-    height: 17px;
-  }
+
+.adr_text_box {
+  width: 415px;
 }
-@media (max-width:768px) {
-  #wrapper_page{
-      height:400px;
-    }
-  .submit{
+
+@media (max-width:840px) {
+  #wrapper {
+    height: 400px;
+  }
+
+  .submit {
     padding-bottom: 10px;
-  }  
-  #password {
-    width:100%;
   }
+
+  #password {
+    width: 100%;
+  }
+
+  mat-form-field {
+    width: 100%;
+  }
+
   .user_image {
     width: 100%;
     height: auto;
     margin-top: 0px;
     padding-bottom: 20px;
-  }  
+  }
+
   .user_file {
     margin-top: 40px;
     width: 180px;
-    float: left;  
+    float: left;
   }
-  
+
   .select_file {
     height: 100px;
     width: 100px;
-    float: right;   
+    float: right;
     padding: 0px 0px 0px 0px;
-  
+
   }
 
-} 
-  
+  .adr_text_box {
+    width: 100%;
+  }
+}

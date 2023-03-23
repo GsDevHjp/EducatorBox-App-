@@ -5,7 +5,7 @@
     color: black;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     border-radius: 50px;
     background-color: rgb(110, 110, 110);
 }
@@ -17,6 +17,10 @@
     color: black;
 }
 
+mat-icon {
+    cursor: pointer;
+}
+
 .mat-menu-panel {
     margin-top: 15px;
 }
@@ -26,9 +30,9 @@
     background-color: #1d1f23;
 }
 
-.action_btn:hover{
-    background-color: #3f50b5!important;
-} 
+.action_btn:hover {
+    background-color: #3f50b5 !important;
+}
 
 /* for table  */
 .head {
@@ -92,30 +96,37 @@ tr:hover {
 .mat-row:hover>.mat-cell {
     color: white
 }
+
 #tbl_hight {
     height: 45px;
 }
+
 .action_btn {
     color: #fff;
 }
+
 .add_mat_icon {
     cursor: pointer;
     color: white;
 }
+
 .action_btn:hover {
     background-color: #5a74ad;
 }
+
 .submit {
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
 }
+
 .close-mat-icon {
     color: #1d1f23;
     position: relative;
     left: 4px;
     top: -10px;
 }
+
 .example-spacer {
     flex: 1 1 auto;
     margin-bottom: 20px;
@@ -126,45 +137,69 @@ tr:hover {
 mat-dialog-container {
     padding: 25px 20px 20px 20px !important;
 }
+
 .add_form_title {
     height: 30px !important;
     background: none !important;
     padding: 0px !important;
 }
+
 mat-form-field {
     margin: 0px 5px;
 }
+
 .desc {
     width: calc(100% - 10px) !important;
 }
+
 @media (max-width:768px) {
-     .mat-dialog-container {
+
+    /* .mat-dialog-container {
         height:500px !important;
         background-color: rgb(222, 222, 222) !important;
         padding: 25px 20px 20px 20px !important;
+    } */
+    #wrapper {
+        height: 450px;
+    }
+
+    .submit {
+        padding-bottom: 10px;
     }
 
     mat-form-field {
         width: 100%;
         margin: 0px;
     }
+
     .mat-elevation-z8 {
         overflow: auto;
     }
+
     .desc {
         width: 100% !important;
     }
-    th.mat-header-cell{
+
+    th.mat-header-cell {
         white-space: nowrap;
         padding: 0px 10px !important;
     }
-    td.mat-cell{
+
+    td.mat-cell {
         white-space: nowrap;
         padding: 0px 10px !important;
     }
-    mat-paginator{
-        position: absolute;
-        width: 100%; 
-    }    
+
+    mat-paginator {
+        position: fixed;
+        width: 100%;
+    }
+
+    th.mat-header-cell {
+        font-size: 12px;
+    }
+
+    .example-spacer {
+        font-size: 14px;
+    }
 }
-    

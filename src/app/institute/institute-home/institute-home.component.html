@@ -11,7 +11,7 @@
                         <div class="name_text">
                             Login as : &nbsp;{{ name | titlecase}}
                         </div>&nbsp;
-                        <button style="background-color: transparent;" mat-raised-button [matMenuTriggerFor]="menu">
+                        <button id="logo_panel" [matMenuTriggerFor]="menu">
                             <img src={{url}}{{img_url}} width="50" height="50" style="border-radius:100%;">
                         </button>
                         <mat-menu #menu="matMenu">

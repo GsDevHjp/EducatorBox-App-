@@ -282,7 +282,7 @@ export class AddEditStudentComponent implements OnInit {
     }
   }
 
-  student_data_reset() {
+  convert_to_admission_data_reset() {
     this.student_form.controls['std_name'].reset()
     this.student_form.controls['std_father_name'].reset()
     this.student_form.controls['std_father_occupation'].reset()
@@ -299,10 +299,20 @@ export class AddEditStudentComponent implements OnInit {
     this.student_form.controls['std_password'].reset()
   }
 
+  get_state(event: any) {
+    console.log(event)
+    const stateformdata = new FormData();
+    stateformdata.append('country_name', event)
+    this.service.get_state_by_country(stateformdata).subscribe(
+      (state_res: any) => {
+        this.state_data = state_res.data
+      }
+    )
+  }
   get_district(event: any) {
     console.log(event)
     const districtformdata = new FormData();
-    districtformdata.append('state_id', event)
+    districtformdata.append('state_name', event)
     this.service.get_district_by_state(districtformdata).subscribe(
       (district_res: any) => {
         this.district_data = district_res.data
