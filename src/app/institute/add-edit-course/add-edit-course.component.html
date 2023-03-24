@@ -7,18 +7,18 @@
 
         <mat-form-field appearance="fill">
             <mat-label>Name</mat-label>
-            <input matInput formControlName="course_name" placeholder="Enter Your Course Name">
+            <input matInput formControlName="course_name" placeholder="Enter course name">
         </mat-form-field>
 
         <mat-form-field appearance="fill">
             <mat-label>Duration (Month)</mat-label>
             <input type="number" matInput formControlName="course_duration" (keyup)="total_clc()"
-                placeholder="Enter Duration(Month)">
+                placeholder="Enter duration(month)">
         </mat-form-field><br>
 
         <mat-form-field appearance="fill" (keyup)="total_clc()">
             <mat-label>Total Fee</mat-label>
-            <input type="number" matInput formControlName="course_total_fee" placeholder="Enter Total Fee">
+            <input type="number" matInput formControlName="course_total_fee" placeholder="Enter total Fee">
         </mat-form-field>
 
         <mat-form-field appearance="fill">
@@ -33,7 +33,7 @@
 
         <mat-form-field appearance="fill">
             <mat-label>Monthly Fee</mat-label>
-            <input type="number" matInput formControlName="course_monthly_fee" placeholder="Enter Monthly Fee ">
+            <input type="number" matInput formControlName="course_monthly_fee" placeholder="Enter monthly fee ">
         </mat-form-field><br>
 
         <mat-form-field appearance="fill">
@@ -48,7 +48,7 @@
 
         <mat-form-field class="example-full-width desc" appearance="fill" id="total">
             <mat-label>Description</mat-label>
-            <input type="text" matInput formControlName="course_description" placeholder="Enter Your Description">
+            <input type="text" matInput formControlName="course_description" placeholder="Enter description">
         </mat-form-field>
 
         <input type="number" [(ngModel)]="admin" formControlName="admin_id_fk" hidden>

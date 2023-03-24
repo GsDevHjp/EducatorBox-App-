@@ -1,9 +1,9 @@
-<div id="wrappper"><mat-toolbar  class="add_form_title">
-    <span class="example-spacer">Add Expense</span>
-    <mat-icon mat-dialog-close class="close-mat-icon">cancel</mat-icon>
-</mat-toolbar>
-<div mat-dialog-content>
-    <form [formGroup]="expenseForm">
+<div id="wrapper">
+    <mat-toolbar class="add_form_title">
+        <span class="example-spacer">Add Expense</span>
+        <mat-icon mat-dialog-close class="close-mat-icon">cancel</mat-icon>
+    </mat-toolbar>
+        <form [formGroup]="expenseForm">
 
             <mat-form-field appearance="fill">
                 <mat-label>Expense Type</mat-label>
@@ -22,19 +22,19 @@
             </mat-form-field>
             <mat-form-field appearance="fill">
                 <mat-label>Expense Amount</mat-label>
-                <input formControlName="expense_amount" matInput type="number">
+                <input formControlName="expense_amount" matInput type="number" placeholder="Enter amount">
             </mat-form-field><br>
 
             <mat-form-field appearance="fill">
                 <mat-label> Pay To</mat-label>
-                <input formControlName="expense_pay_to" matInput>
+                <input formControlName="expense_pay_to" matInput placeholder="Enter pay to">
             </mat-form-field>
 
             <mat-form-field appearance="fill">
-                <mat-label>Mobile Number</mat-label>
+                <mat-label>WhatsApp No</mat-label>
                 <input formControlName="expense_mobile" matInput type="number"
                     onkeypress=" return this.value.length < 10"
-                    oninput="if(this.value.length>=10) {this.value = this.value.sclice (0,10);}">
+                    oninput="if(this.value.length>=10) {this.value = this.value.sclice (0,10);}" placeholder="Enter whatsapp no">
             </mat-form-field><br>
 
             <mat-form-field class="example-full-width" appearance="fill">
@@ -48,18 +48,17 @@
                     <mat-option *ngFor="let emp of emp_data" [value]="emp.emp_id">{{emp.emp_name}}</mat-option>
                 </mat-select>
             </mat-form-field><br>
-       
-            <mat-form-field appearance="fill" id="description">
+
+            <mat-form-field class="example-full-width desc" appearance="fill" id="total">
                 <mat-label>Description</mat-label>
-                <input formControlName="expense_desc" matInput>
+                <input type="text" matInput formControlName="expense_desc" placeholder="Enter description">
             </mat-form-field>
 
-        <input formControlName="admin_id_fk" type="number" ngModel={{admin_id}} readonly hidden>
-    </form>
+            <input formControlName="admin_id_fk" type="number" ngModel={{admin_id}} readonly hidden>
+        </form>
     <div class="submit">
         <button mat-raised-button color="warn" (click)="expence_data_reset()">Reset</button>&nbsp;&nbsp;&nbsp;
         <button mat-raised-button color="primary" (click)="onSubmit()"
             [disabled]="!expenseForm.valid">{{actionBtn}}</button>
     </div>
-</div>
 </div>

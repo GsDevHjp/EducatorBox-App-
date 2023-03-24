@@ -4,7 +4,6 @@
 </mat-toolbar>
 
 <form [formGroup]="inst_book_form">
-
     <div class="box">
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Course</mat-label>
@@ -18,21 +17,20 @@
             <mat-label class="student_kb">Book pdf</mat-label>
             <input type="file" name="std_photo" class="upload" (change)="OnUpload($event)"
                 formControlName="inst_book_img">
-        </table>   
+        </table>
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Book Title</mat-label>
-            <input matInput formControlName="inst_book_title">
+            <input matInput formControlName="inst_book_title" placeholder="Enter book titel">
         </mat-form-field>
 
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Description</mat-label>
-            <input matInput formControlName="inst_book_description">
+            <input matInput formControlName="inst_book_description" placeholder="Enter description">
         </mat-form-field>
     </div>
     <input type="number" readonly [ngModel]="admin" formControlName="admin_id_fk" hidden>
 
 </form>
-
 <div class="submit">
     <button mat-raised-button color="warn" (click)="inst_book_data_reset()">Reset</button>&nbsp;&nbsp;&nbsp;
     <button mat-raised-button color="primary" (click)="inst_book_btn()">{{actionBtn}}</button>

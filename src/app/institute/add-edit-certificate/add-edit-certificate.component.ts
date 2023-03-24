@@ -46,6 +46,8 @@ export class AddEditCertificateComponent implements OnInit {
   image_url:any = "assets/man.png"
   image_select:any
 
+  Country= "India"
+  state= "Bihar"
   constructor(
     private personal: FormBuilder,
     private permanet: FormBuilder,
@@ -78,6 +80,18 @@ export class AddEditCertificateComponent implements OnInit {
     this.services.get_country().subscribe(
       (state_res: any) => {
         this.country_data = state_res.data
+      }
+    )
+
+    this.services.get_state().subscribe(
+      (state_res: any) => {
+        this.state_data = state_res.data
+      }
+    )
+
+    this.services.get_district().subscribe(
+      (district_res: any) => {
+        this.district_data = district_res.data
       }
     )
     this.personal_form = this.personal.group({

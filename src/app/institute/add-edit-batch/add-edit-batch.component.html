@@ -1,3 +1,4 @@
+<div id="wrapper">
     <mat-toolbar class="add_form_title">
         <span class="example-spacer">{{batch_heading}}</span>
         <mat-icon mat-dialog-close class="close-mat-icon">cancel</mat-icon>
@@ -13,7 +14,7 @@
 
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Name</mat-label>
-            <input matInput formControlName="batch_name" placeholder="Enter Your Batch Name">
+            <input matInput formControlName="batch_name" placeholder="Enter batch name">
         </mat-form-field>
         <br>
 
@@ -47,7 +48,7 @@
         <br>
         <mat-form-field class="example-full-width desc" appearance="fill">
             <mat-label>Description</mat-label>
-            <input type="text" matInput formControlName="batch_description" placeholder="Enter Your Description">
+            <input type="text" matInput formControlName="batch_description" placeholder="Enter description">
         </mat-form-field>
 
         <input type="number" readonly [ngModel]="admin" formControlName="admin_id_fk" hidden>
@@ -59,5 +60,7 @@
     </form>
     <div class="submit">
         <button mat-raised-button color="warn" (click)="batch_data_reset()">Reset</button>&nbsp;&nbsp;&nbsp;
-        <button mat-raised-button color="primary" (click)="batch_btn()" [disabled]="!this.batch_form.valid">{{actionBtn}}</button>
+        <button mat-raised-button color="primary" (click)="batch_btn()"
+            [disabled]="!this.batch_form.valid">{{actionBtn}}</button>
     </div>
+</div>

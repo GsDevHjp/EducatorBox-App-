@@ -216,8 +216,6 @@ export class AddEditPaymentRecivedComponent implements OnInit {
         // for course and batch 
         this.course_data = res.data
         this.batch_data = res.data
-
-
       }
     )
   }

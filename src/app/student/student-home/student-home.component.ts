@@ -24,12 +24,20 @@ export class StudentHomeComponent implements OnInit {
   login_deatils: any
   login: any
   std_id: any
-  constructor(
-    private dailog: MatDialog,
-    private observe: BreakpointObserver,
-    private servies: ManageService
+  action_menu: boolean = true
 
-  ) { }
+  constructor(
+    private observe: BreakpointObserver,
+    private dailog: MatDialog,
+    private servies:ManageService
+  ) {
+    if (window.innerWidth > 720) {
+      this.action_menu = true
+    }
+    else {
+      this.action_menu = false
+    }
+  }
 
   ngOnInit(): void {
     this.observe.observe(['(max-width:768px)']).subscribe((res) => {
@@ -67,7 +75,6 @@ export class StudentHomeComponent implements OnInit {
     )
   }
 
-  
   get_std_data(std: any) {
     const fromdata = new FormData()
     fromdata.append('std_id', std)
