@@ -14,25 +14,25 @@ import { Router } from '@angular/router';
 
 export class AddEditStudentComponent implements OnInit {
   student_form!: FormGroup;
-  reg_id:boolean = true;
+  reg_id: boolean = true;
   upload: any;
   hide = true;
   ActionBtn: string = 'Add'
   heading_act: string = 'Add Student'
   admin = 1;
   institute_id: any;
-  selectedImage: any = 'assets/profile.png';
+  selectedImage: any = 'https://educatorbox.com/assets/user.png';
   status: any = 1
   login_deatils: any
   login: any
-  student_id: Number = 0 
+  student_id: Number = 0
   inst_id: any;
   inst_id_for_inst_login: any;
   std_data: any;
   std: any = 1;
-  autoselect='Male'
-  state_data:any
-  district_data:any
+  autoselect = 'Male'
+  state_data: any
+  district_data: any
 
   constructor(
     private popup: NgToastService,
@@ -129,7 +129,7 @@ export class AddEditStudentComponent implements OnInit {
         this.state_data = state_res.data
       }
     )
-  
+
   }
 
   student_btn() {
@@ -146,21 +146,19 @@ export class AddEditStudentComponent implements OnInit {
           console.log(res)
           if (res.success) {
             this.popup.warning({ detail: 'Warning', summary: 'this email already exists ' + res.data[0].std_name, })
-      }
-          else{
-  
-              this.final_submit()
+          }
+          else {
+
+            this.final_submit()
           }
         },
         (error: any) => {
         }
       )
-
-
-        }
+    }
   }
 
-  final_submit(){
+  final_submit() {
     console.log(this.student_form.value)
     const formdata = new FormData();
     formdata.append('std_name', this.student_form.get('std_name')?.value)
@@ -218,7 +216,7 @@ export class AddEditStudentComponent implements OnInit {
     updatedata.append('std_img', this.student_form.get('std_img')?.value)
     updatedata.append('std_address', this.student_form.get('std_address')?.value)
     updatedata.append('std_password', this.student_form.get('std_password')?.value)
-    updatedata.append('status','1')
+    updatedata.append('status', '1')
     updatedata.append('institute_id_fk', this.login.inst_id)
     updatedata.append('admin_id_fk', this.student_form.get('admin_id_fk')?.value)
     this.service.put_student(updatedata).subscribe(
@@ -245,7 +243,7 @@ export class AddEditStudentComponent implements OnInit {
           this.std_data = res.data
           console.log(this.std_data)
           if (res.success == 1) {
-            this.std = res.data.length + 1      
+            this.std = res.data.length + 1
             this.student_form.controls['std_regist_no'].setValue(this.login.inst_id + formatDate(new Date(), 'yyyyMMdd', 'en') + this.std);
           }
         }
@@ -289,14 +287,13 @@ export class AddEditStudentComponent implements OnInit {
     this.student_form.controls['std_whatsapp_no'].reset()
     this.student_form.controls['std_aadhar'].reset()
     this.student_form.controls['std_email'].reset()
+    this.student_form.controls['std_password'].reset()
     this.student_form.controls['std_dob'].reset()
     this.student_form.controls['std_gender'].reset()
     this.student_form.controls['std_state'].reset()
     this.student_form.controls['std_district'].reset()
-    this.student_form.controls['std_regist_date'].reset()
-    this.student_form.controls['std_img'].reset()
+    this.selectedImage = 'assets/' + this.student_form.controls['std_img'].reset()
     this.student_form.controls['std_address'].reset()
-    this.student_form.controls['std_password'].reset()
   }
 
   get_state(event: any) {

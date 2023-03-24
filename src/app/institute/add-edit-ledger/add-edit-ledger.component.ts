@@ -16,6 +16,7 @@ export class AddEditLedgerComponent implements OnInit {
   Ledger_Form: any;
   actionBtn: string = 'Add'
   admin = 1;
+  profit_loss = 0;
   login_deatils: any
   login: any
   inst_id: any
@@ -47,6 +48,7 @@ export class AddEditLedgerComponent implements OnInit {
       ledger_expence: ['', Validators.required],
       ledger_today_Recived: ['', Validators.required],
       ledger_date: ['',],
+      profit_loss: ['0'],
       institute_id_fk: ['', Validators.required],
       admin_id_fk: ['']
     })
@@ -96,6 +98,7 @@ export class AddEditLedgerComponent implements OnInit {
         else {
           this.Ledger_Form.controls['ledger_today_Recived'].setValue(res.data[0].fee_amount)
         }
+        this.Ledger_Form.controls['profit_loss'].setValue(res.data[0].fee_amount- res.data[0].expense_amount)
 
       }
     )

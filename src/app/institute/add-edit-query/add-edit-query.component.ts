@@ -70,4 +70,8 @@ export class AddEditQueryComponent implements OnInit {
       }
     })
   }
+  query_reset(){
+    this.Query_Form.controls['query_answer'].reset()
+  }
 }
+

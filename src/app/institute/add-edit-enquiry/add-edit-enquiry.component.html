@@ -1,24 +1,25 @@
-    <mat-toolbar  class="add_form_title">
+<div id="wrapper">
+    <mat-toolbar class="add_form_title">
         <span class="example-spacer">{{enquiry_heading}}</span>
-        <mat-icon mat-dialog-close  class="close-mat-icon">cancel</mat-icon>
+        <mat-icon mat-dialog-close class="close-mat-icon">cancel</mat-icon>
     </mat-toolbar>
 
     <form [formGroup]="enquiry_form">
 
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Name</mat-label>
-            <input matInput formControlName="std_name">
+            <input matInput formControlName="std_name" placeholder="Enter name">
         </mat-form-field>
 
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Father Name</mat-label>
-            <input matInput formControlName="std_father_name">
+            <input matInput formControlName="std_father_name" placeholder="Enter father name">
         </mat-form-field><br>
 
         <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Mobile</mat-label>
+            <mat-label>WhatsApp No</mat-label>
             <input formControlName="std_whatsapp_no" matInput type="number" onkeypress=" return this.value.length < 10"
-                oninput="if(this.value.length>=10) {this.value = this.value.sclice (0,10);}">
+                oninput="if(this.value.length>=10) {this.value = this.value.sclice (0,10);}" placeholder="Enter whatsapp no">
         </mat-form-field>
 
         <mat-form-field class="example-full-width" appearance="fill">
@@ -45,7 +46,7 @@
         <br>
         <mat-form-field appearance="fill" id="address">
             <mat-label>Address</mat-label>
-            <textarea matInput formControlName="std_address"></textarea>
+            <textarea matInput formControlName="std_address" placeholder="Enter address"></textarea>
         </mat-form-field>
 
         <input type="number" readonly [ngModel]="admin" formControlName="admin_id_fk" hidden>
@@ -56,3 +57,4 @@
         <button mat-raised-button color="primary" (click)="enquiry_btn()"
             [disabled]="!enquiry_form.valid">{{actionBtn}}</button>
     </div>
+</div>

@@ -72,7 +72,6 @@ export class AddEditRegistrationComponent implements OnInit {
         this.popup.error({ detail: 'Unsuccess', summary: 'Registration Unsuccessfull..',})
       }
     )
-
   }
 
   match_otp(){

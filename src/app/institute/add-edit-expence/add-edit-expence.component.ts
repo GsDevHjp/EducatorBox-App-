@@ -118,5 +118,12 @@ export class AddEditExpenceComponent implements OnInit {
     })
   }
   expence_data_reset() {
+    this.expenseForm.controls['expense_type'].reset()
+    this.expenseForm.controls['expense_amount'].reset()
+    this.expenseForm.controls['expense_pay_to'].reset()
+    this.expenseForm.controls['expense_mobile'].reset()
+    this.expenseForm.controls['expense_date'].reset()
+    this.expenseForm.controls['expense_desc'].reset()
+    this.expenseForm.controls['employee_id_fk'].reset()
   }
 }
