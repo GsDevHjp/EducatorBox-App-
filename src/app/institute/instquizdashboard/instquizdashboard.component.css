@@ -107,8 +107,8 @@ mat-icon {
     margin: 35px 0px 0px 0px;
   }
 }
-
-@media(max-width:300px) {
+/* by sahil */
+@media(max-width:420px) {
   .main_area {
     padding-right: 4px;
   }
