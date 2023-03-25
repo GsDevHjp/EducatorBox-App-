@@ -25,12 +25,12 @@
   <div class="box">
       <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Notes Title</mat-label>
-          <input matInput formControlName="inst_notes_title">
+          <input matInput formControlName="inst_notes_title" placeholder="Enter notes title">
       </mat-form-field>
 
   <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Description</mat-label>
-      <input matInput formControlName="inst_notes_description">
+      <input matInput formControlName="inst_notes_description" placeholder="Enter description">
   </mat-form-field>
   </div>
   <input type="number" readonly [ngModel]="admin" formControlName="admin_id_fk" hidden>

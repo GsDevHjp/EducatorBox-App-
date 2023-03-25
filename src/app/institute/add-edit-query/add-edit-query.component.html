@@ -29,6 +29,6 @@
 
 </form>
 <div class="submit">
-    <button mat-raised-button color="warn">Reset</button>&nbsp;&nbsp;&nbsp;
+    <button mat-raised-button color="warn" (click)="query_reset()">Reset</button>&nbsp;&nbsp;&nbsp;
     <button mat-raised-button color="primary" (click)="add_query()" [disabled]="!this.Query_Form.valid">{{actionBtn}}</button>
 </div>
