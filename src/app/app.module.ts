@@ -270,7 +270,8 @@ import { LiveClassComponent } from './institute/live-class/live-class.component'
     NgConfirmModule,
     NgxUiLoaderHttpModule.forRoot({
       showForeground: true,
-    })
+    }),
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
